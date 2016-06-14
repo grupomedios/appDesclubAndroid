@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/material_grey_200"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/BeepLabel"
+            android:id="@+id/login_lastName1_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/lastName1_m"
+            android:visibility="invisible" />
+
+        <com.andreabaccega.widget.FormEditText
+            android:hint="@string/lastName1"
+            android:id="@+id/login_lastName1_edit"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            app:emptyErrorString="@string/invalid_lastName1"
+            app:testErrorString="@string/invalid_lastName1"
+            app:testType="alpha"
+            android:visibility="invisible" />
+
+        <TextView
+            style="@style/BeepLabel"
+            android:id="@+id/login_email_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/email"
+            android:visibility="invisible" />
+
+        <com.andreabaccega.widget.FormEditText
+            android:hint="@string/email"
+            android:id="@+id/login_email_edit"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            app:emptyErrorString="@string/invalid_email"
+            app:testErrorString="@string/invalid_email"
+            app:testType="email"
+            android:visibility="invisible" />
+
+        <TextView
+            style="@style/BeepLabel"
+            android:id="@+id/login_card_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/card_code_m" />
+
+        <com.andreabaccega.widget.FormEditText
+            android:hint="@string/card_code"
+            android:id="@+id/login_card_edit"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            app:emptyErrorString="@string/invalid_card"
+            app:testErrorString="@string/invalid_card"
+            app:testType="numeric" />
+
+
+        <TextView
+            style="@style/ErrorLabel"
+            android:id="@+id/login_error_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="@string/invalid_credentials" />
+
+        <TextView
+            style="@style/ErrorLabel"
+            android:id="@+id/login_error_already_used_label"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="@string/already_used_credentials" />
+
+    </LinearLayout>
+</LinearLayout>

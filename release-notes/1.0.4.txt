@@ -1,0 +1,5 @@
+- Opciones de acceder como miembro / explorar
+- Ver tarjeta en el tab de tarjeta
+- Validar rango de distancia antes de mostrar tarjeta
+- Si no es miembro mostrar mensaje al ver cupón
+- Mostrar tarjeta con fecha y reloj

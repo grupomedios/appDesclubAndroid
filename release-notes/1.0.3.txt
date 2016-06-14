@@ -1,0 +1,2 @@
+- Corrección de issues en versiones menores a lollipop
+- Corrección de color en los dialogos de lollipop

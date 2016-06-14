@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.grupomedios.desclub.desclubandroid">
+
+    <!-- For network access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="com.grupomedios.desclub.desclubandroid.permission.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <permission
+        android:name="com.grupomedios.desclub.desclubandroid.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:name=".DesclubApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+
+
+        <!--Splash activity-->
+        <activity
+            android:name=".home.activity.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--DesclubMain activity-->
+        <activity
+            android:name=".home.activity.DesclubMainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:logo="@mipmap/ic_launcher"></activity>
+
+        <!-- Salud activity-->
+        <activity
+            android:name=".card.activity.SaludActivity"
+            android:label="@string/salud"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".home.activity.DesclubMainActivity"></activity>
+
+        <!-- Discount list activity-->
+        <activity
+            android:name=".discounts.activity.DiscountListActivity"
+            android:label="@string/discounts"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".home.activity.DesclubMainActivity"></activity>
+
+        <!-- Map activity-->
+        <activity
+            android:name=".map.activity.DesclubMapActivity"
+            android:label="@string/discounts"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".discounts.activity.DiscountListActivity"></activity>
+
+        <!-- Branches activity-->
+        <activity
+            android:name=".discounts.activity.BranchesActivity"
+            android:label="@string/branches"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".discounts.activity.DiscountActivity"></activity>
+
+        <!-- Discount activity-->
+        <activity
+            android:name=".discounts.activity.DiscountActivity"
+            android:label="@string/discounts"
+            android:launchMode="singleInstance"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName=".discounts.activity.DiscountListActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD36W2dGj_00aqMNnEjff1ZU1I2kXyyXz0" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="desclub_blue">#3BAAD0</color>
+    <color name="desclub_blue_dark">#005F98</color>
+    <color name="desclub_orange">#ea8d06</color>
+
+    <color name="category_alimentos">#CA4A2A</color>
+    <color name="category_belleza_salud">#6993CC</color>
+    <color name="category_moda">#AA3659</color>
+    <color name="category_educacion">#E1C135</color>
+    <color name="category_entretenimiento">#885CA1</color>
+    <color name="category_servicios">#B8CA46</color>
+    <color name="category_turismo">#79BC9E</color>
+    <color name="category_all">#A63CF1</color>
+
+
+
+    <color name="white_15_percent">#26ffffff</color>
+    <color name="white_30_percent">#4Dffffff</color>
+
+</resources>

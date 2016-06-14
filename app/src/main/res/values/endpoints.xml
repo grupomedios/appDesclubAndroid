@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="endpoint_discounts_nearby">/v1/desclubAPI/nearByDiscounts</string>
+    <string name="endpoint_discounts_recommended">/v1/desclubAPI/recommendedDiscounts</string>
+
+
+    <string name="endpoint_states">/v1/desclubAPI/states</string>
+    <string name="endpoint_zones">/v1/desclubAPI/zones</string>
+    <string name="endpoint_categories">/v1/desclubAPI/categories</string>
+    <string name="endpoint_subcategories">/v1/desclubAPI/categories/%1$s/subcategories</string>
+
+    <string name="endpoint_corporateMembership">/v1/desclubAPI/corporateMembership</string>
+    <string name="endpoint_corporateMembershipsByNumber">/v1/desclubAPI/corporateMembershipsByNumber/%1$s</string>
+    <string name="endpoint_corporateMemberships">/v1/desclubAPI/corporateMemberships/%1$s</string>
+
+</resources>

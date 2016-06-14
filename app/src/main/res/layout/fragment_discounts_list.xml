@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/discount_list_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/beep_toolbar"
+            layout="@layout/discounts_toolbar" />
+
+        <com.andreabaccega.widget.FormEditText
+            android:id="@+id/discount_list_search_input"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/material_grey_700"
+            android:textColorHint="@color/material_grey_400" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:id="@+id/discount_list_state_button"
+                android:textAllCaps="false"
+                android:background="@color/material_grey_800"
+                android:layout_gravity="left"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/white"
+                android:text="@string/state"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:id="@+id/discount_list_category_button"
+                android:textAllCaps="false"
+                android:background="@color/material_grey_800"
+                android:textColor="@android:color/white"
+                android:text="@string/category"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp">
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:id="@+id/discount_list_zone_button"
+                android:textAllCaps="false"
+                android:background="@color/material_grey_800"
+                android:layout_gravity="left"
+                android:layout_alignParentLeft="true"
+                android:textColor="@android:color/white"
+                android:text="@string/zone"/>
+
+            <Button
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:id="@+id/discount_list_subcategory_button"
+                android:textAllCaps="false"
+                android:background="@color/material_grey_800"
+                android:textColor="@android:color/white"
+                android:text="@string/subcategory"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <com.yalantis.phoenix.PullToRefreshView
+            android:id="@+id/discount_list_pull_to_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white">
+
+            <ListView
+                android:id="@+id/discounts_listView"
+                style="@style/ModulesListViewStyle"
+                android:divider="@color/material_grey_300" />
+
+        </com.yalantis.phoenix.PullToRefreshView>
+    </LinearLayout>
+
+</RelativeLayout>

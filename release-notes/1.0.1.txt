@@ -1,0 +1,5 @@
+- Primera versión con nuevo API
+- Pendiente:
+    - Filtros
+    - Ir al mapa desde listados
+    - Imagenes tarjeta (debe ser enviado por la diseñadora de GM)

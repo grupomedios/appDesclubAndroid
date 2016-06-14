@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Desclub</string>
+
+    <!-- Common strings-->
+    <string name="search_hint">Buscar</string>
+    <string name="yes">Sí</string>
+    <string name="ok">OK</string>
+    <string name="no">No</string>
+    <string name="loading">Por favor espere ...</string>
+    <string name="loading_title">Procesando</string>
+    <string name="close">Cerrar</string>
+    <string name="previous">Anterior</string>
+    <string name="next">Siguiente</string>
+    <string name="finish">Terminar</string>
+    <string name="about">Acerca de BeepQuest</string>
+    <string name="version">Versión</string>
+    <string name="discounts">Descuentos</string>
+    <string name="salud">Desclub + Salud</string>
+    <string name="medical_center">Centro de atención médica</string>
+    <string name="support_24">Soporte 24 Hrs</string>
+    <string name="promo">Promoción</string>
+    <string name="state">Estado</string>
+    <string name="zone">Zona</string>
+    <string name="category">Giro</string>
+    <string name="subcategory">Subgiro</string>
+    <string name="filter">Filtrar</string>
+    <string name="start">¿Cómo quieres empezar?</string>
+    <string name="enter_now">Entrar ahora</string>
+    <string name="access">Acceder</string>
+    <string name="explore">Explorar</string>
+    <string name="exit">Salir</string>
+    <string name="cancel">Cancelar</string>
+    <string name="signin">Regístrate</string>
+    <string name="red_medica_alert_text">Muy pronto podrás disfrutar de los beneficios de la red médica con tu tarjeta Desclub</string>
+    <string name="card_text">Muy pronto podrás usar tu tarjeta Desclub para disfrutar los descuentos desde la app</string>
+
+    <!-- login-->
+    <string name="lastName1">Primer Apellido</string>
+    <string name="search">Buscar</string>
+    <string name="lastName1_m">Primer Apellido</string>
+    <string name="invalid_lastName1">Apellido inválido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="invalid_email">Correo electrónico inválido</string>
+    <string name="already_used_credentials">Esta membresía ya ha sido usada. Por favor contacte a soporte@desclub.com</string>
+    <string name="card_code">Número de membresía</string>
+    <string name="card_code_m">Número de membresía *</string>
+    <string name="invalid_card">Código de tarjeta inválido</string>
+    <string name="invalid_credentials">Credenciales inválidas. Intente de nuevo</string>
+    <string name="exit_question">¿Quieres cerrar tu sesión?</string>
+    <string name="exit_text">Si cierras tu sesión deberás ingresar nuevamente tus credenciales para acceder a los descuentos desclub.</string>
+    <string name="project">Proyecto</string>
+    <string name="name">Nombre</string>
+    <string name="validThru">Vigencia</string>
+
+    <!-- menu-->
+    <string name="home">Inicio</string>
+    <string name="map">Mapa</string>
+    <string name="recommended">Recomendados</string>
+    <string name="card">Tarjeta</string>
+
+    <!-- categories-->
+    <string name="alimentos">Alimentos</string>
+    <string name="belleza_salud">Belleza y Salud</string>
+    <string name="educacion">Educación</string>
+    <string name="entretenimiento">Entretenimiento</string>
+    <string name="moda_hogar">Moda y Hogar</string>
+    <string name="servicios">Servicios</string>
+    <string name="turismo">Turismo</string>
+    <string name="see_all">Ver todas</string>
+    <string name="red_medica">Red Médica</string>
+
+    <string name="alimentos_id">551ed76a5d713df64eace614</string>
+    <string name="belleza_salud_id">551ed7845d713df64eace615</string>
+    <string name="educacion_id">551ed79c5d713df64eace616</string>
+    <string name="entretenimiento_id">551ed7ac5d713df64eace617</string>
+    <string name="moda_hogar_id">551ed7db5d713df64eace618</string>
+    <string name="servicios_id">551ed7ee5d713df64eace619</string>
+    <string name="turismo_id">551ed80b5d713df64eace61a</string>
+
+    <!-- Discount-->
+    <string name="discount">Descuento</string>
+    <string name="in_cash">En efectivo</string>
+    <string name="with_card">Con tarjeta</string>
+    <string name="select_state">Seleccione un estado</string>
+    <string name="select_zone">Seleccione una zona</string>
+    <string name="select_category">Seleccione un giro</string>
+    <string name="select_subcategory">Seleccione un subgiro</string>
+    <string name="use_coupon">Usar cupón</string>
+    <string name="options">+</string>
+    <string name="hide_coupon">Ocultar cupón</string>
+    <string name="membership">Membresía</string>
+    <string name="anonymous_message_card">Para utilizar tu tarjeta virtual debes registrarte, ve a la sección tarjeta y regístrate.</string>
+    <string name="anonymous_message">Para utilizar tu tarjeta virtual debes registrarte.</string>
+    <string name="out_of_range">Estás fuera de rango. Debes estar cerca del establecimiento para usar este cupón.</string>
+    <string name="directions">Cómo llegar</string>
+    <string name="view_branches">Ver sucursales</string>
+    <string name="show_in_map">Ver en mapa</string>
+    <string name="branches">Sucursales</string>
+
+    <string name="error">Error</string>
+    <string name="error_login_title">¡Inténtalo de nuevo!</string>
+    <string name="error_connection">Error de conexión. Inténtalo más tarde.</string>
+    <string name="error_connection_detail">Asegúrate de tener una conexión a internet activa</string>
+    <string name="error_login">Correo electrónico o contraseña inválidos</string>
+    <string name="error_user_alreay_exists">Un usuario con este correo electrónico ya está registrado</string>
+
+</resources>

@@ -1,0 +1,2 @@
+- Corrección de issues en lollipop
+- Se agregan filtros de zona, estado y subgiro con un FAB

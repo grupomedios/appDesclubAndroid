@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:theme="@style/TransparentBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/beep_toolbar"
+            layout="@layout/discount_toolbar" />
+
+        <RelativeLayout
+            android:id="@+id/viewDiscount_couponView_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="top"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/viewDiscount_showMembershipMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_grey_100"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/tarjeta_bolsas" />
+
+                <TextView
+                    android:layout_width="190dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="@string/anonymous_message_card" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/viewDiscount_showCardLayout"
+                android:layout_width="421dp"
+                android:layout_height="265dp"
+                android:layout_marginRight="80dp"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/card_back" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextClock
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:format12Hour="MMM dd, yyyy hh:mm:ss"
+                        android:format24Hour="MMM dd, yyyy hh:mm:ss"
+                        android:paddingTop="10dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="15dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="79dp"
+                            android:src="@drawable/logo_desclub" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_height="wrap_content"
+                            android:textColor="@android:color/white"
+                            android:paddingLeft="10dp"
+                            android:textStyle="bold"
+                            android:text="@string/membership"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/viewDiscount_membershipNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="20dp"
+                        android:text="0000 0000 0000 0000"
+                        android:textColor="@android:color/white"
+                        android:textSize="28dp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+
+                    <TextView
+                        android:id="@+id/viewDiscount_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:text="BERNY MOHNBLATT"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:typeface="monospace" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="0.7"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="20dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="0dp"
+                                android:text="@string/validThru"
+                                android:textColor="@android:color/white"
+                                android:textSize="11dp" />
+
+                            <TextView
+                                android:id="@+id/viewDiscount_validThru"
+                                android:layout_width="180dp"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="0dp"
+                                android:paddingBottom="10dp"
+                                android:text="08-19"
+                                android:textColor="@android:color/white"
+                                android:textSize="17dp"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_weight="0.2"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:src="@drawable/logo_desclub" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/viewDiscount_business_logo_imageView"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:maxWidth="80dp"
+                    android:src="@drawable/logo_small" />
+
+
+                <LinearLayout
+                    android:id="@+id/viewDiscount_card_cash_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/discount"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/material_grey_600" />
+
+                    <TextView
+                        android:id="@+id/viewDiscount_cash_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0%"
+                        android:textColor="@color/material_red_600"
+                        android:textSize="38sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/in_cash"
+                        android:textColor="@color/material_grey_400" />
+
+                    <TextView
+                        android:id="@+id/viewDiscount_card_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="0%"
+                        android:textColor="@color/material_red_600"
+                        android:textSize="38sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/with_card"
+                        android:textColor="@color/material_grey_400" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/viewDiscount_promo_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/viewDiscount_promo_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="promo"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/viewDiscount_validity_end_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="Vigente hasta: 2014-06-09"
+                    android:textColor="@color/desclub_orange"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/material_grey_100"
+                    android:orientation="vertical"
+                    android:paddingBottom="150dp">
+
+                    <TextView
+                        android:id="@+id/viewDiscount_branch_name_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:text="buss name"
+                        android:textColor="@color/material_grey_800"
+                        android:textSize="22sp" />
+
+                    <TextView
+                        android:id="@+id/viewDiscount_branch_address_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:text="addr1"
+                        android:textColor="@color/material_grey_500" />
+
+                    <TextView
+                        android:id="@+id/viewDiscount_distance_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="0 km"
+                        android:textColor="@color/desclub_blue"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/viewDiscount_restrictions_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="25dp"
+                        android:layout_marginTop="25dp"
+                        android:gravity="center"
+                        android:text="restr"
+                        android:textColor="@color/material_red_500"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewDiscount_coupon_layout"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/round_background"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/viewDiscount_coupon_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/use_coupon"
+            android:textColor="@android:color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

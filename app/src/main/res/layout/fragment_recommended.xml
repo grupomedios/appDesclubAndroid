@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal">
+
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/discount_list_pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/discounts_listView"
+            style="@style/ModulesListViewStyle"
+            android:divider="@color/material_grey_300" />
+
+    </com.yalantis.phoenix.PullToRefreshView>
+
+</RelativeLayout>
