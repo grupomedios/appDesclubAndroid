@@ -53,4 +53,10 @@ public class DesclubMapActivity extends DesclubGeneralActivity {
     protected int getLayoutResource() {
         return R.layout.activity_map;
     }
+
+
+    @Override
+    public String getScreenName() {
+        return getString(R.string.analytics_screen_map);
+    }
 }

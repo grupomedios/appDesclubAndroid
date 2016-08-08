@@ -25,6 +25,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 import com.grupomedios.desclub.desclubandroid.R;
 import com.grupomedios.desclub.desclubandroid.VolleySingleton;
+import com.grupomedios.desclub.desclubandroid.common.fragment.BaseFragment;
 import com.grupomedios.desclub.desclubandroid.discounts.activity.DiscountActivity;
 import com.grupomedios.desclub.desclubandroid.home.util.FakeCategoryUtil;
 import com.grupomedios.desclub.desclubapi.facade.DiscountFacade;
@@ -49,7 +50,7 @@ import javax.inject.Inject;
 /**
  * Main {@link Fragment} subclass.
  */
-public class DesclubMapFragment extends Fragment implements OnMapReadyCallback {
+public class DesclubMapFragment extends BaseFragment implements OnMapReadyCallback {
 
     private final String TAG = "DesclubMapFragment";
 
@@ -123,7 +124,7 @@ public class DesclubMapFragment extends Fragment implements OnMapReadyCallback {
         map.getUiSettings().setZoomGesturesEnabled(true);
         map.getUiSettings().setRotateGesturesEnabled(true);
 
-        if(centerInCurrentLocation){
+        if (centerInCurrentLocation) {
             // Move the camera instantly to gps position with a zoom of 21.
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(
                     new LatLng(gpsService.getLatitude(),
@@ -237,7 +238,7 @@ public class DesclubMapFragment extends Fragment implements OnMapReadyCallback {
             currentResultsSize = discountList.size();
         }
 
-        if(discountList != null && discountList.size() > 0 && !mapAlreadyCentered && !centerInCurrentLocation){
+        if (discountList != null && discountList.size() > 0 && !mapAlreadyCentered && !centerInCurrentLocation) {
             // Move the camera instantly to gps position with a zoom of 21.
             Float[] coordinates = discountList.get(0).getDiscount().getLocation().getCoordinates();
             map.moveCamera(CameraUpdateFactory.newLatLngZoom(
@@ -278,4 +279,8 @@ public class DesclubMapFragment extends Fragment implements OnMapReadyCallback {
         requestQueue.add(guestAndLoginRequest);
     }
 
+    @Override
+    public String getScreenName() {
+        return null;
+    }
 }

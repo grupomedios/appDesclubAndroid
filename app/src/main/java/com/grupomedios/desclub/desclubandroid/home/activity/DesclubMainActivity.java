@@ -56,6 +56,41 @@ public class DesclubMainActivity extends DesclubGeneralActivity {
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setAdapter(adapter);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                switch (position) {
+                    //mapa
+                    case 1:
+                        trackScreen(getString(R.string.analytics_screen_map_tab));
+                        break;
+                    //recomendados
+                    case 2:
+                        trackScreen(getString(R.string.analytics_screen_recommended));
+                        break;
+                    //card
+                    case 3:
+                        trackScreen(getString(R.string.analytics_screen_card));
+                        break;
+                    //home
+                    default:
+                        trackScreen(getString(R.string.analytics_screen_home));
+                        break;
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        // For first time
+        trackScreen(getString(R.string.analytics_screen_home));
 
         final SmartTabLayout viewPagerTab = (SmartTabLayout) findViewById(R.id.viewpagertab);
         final LayoutInflater inflater = LayoutInflater.from(viewPagerTab.getContext());
@@ -97,5 +132,10 @@ public class DesclubMainActivity extends DesclubGeneralActivity {
     @Override
     protected int getLayoutResource() {
         return R.layout.activity_main;
+    }
+
+    @Override
+    public String getScreenName() {
+        return null;
     }
 }

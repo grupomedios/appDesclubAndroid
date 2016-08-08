@@ -41,7 +41,6 @@ public abstract class BaseActivity extends ActionBarActivity {
     protected abstract int getLayoutResource();
 
     /**
-     *
      * @param iconRes
      */
     protected void setActionBarIcon(int iconRes) {
@@ -51,7 +50,6 @@ public abstract class BaseActivity extends ActionBarActivity {
     }
 
     /**
-     *
      * @param color
      */
     public void setActionBarBackgroundColor(int color) {
@@ -59,4 +57,5 @@ public abstract class BaseActivity extends ActionBarActivity {
             toolbar.setBackgroundColor(color);
         }
     }
+
 }

@@ -14,6 +14,7 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import com.grupomedios.desclub.desclubandroid.BuildConfig;
 import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 import com.grupomedios.desclub.desclubandroid.R;
+import com.grupomedios.desclub.desclubandroid.common.fragment.BaseFragment;
 import com.grupomedios.desclub.desclubandroid.home.activity.DesclubMainActivity;
 import com.grupomedios.desclub.desclubapi.facade.CorporateMembershipFacade;
 import com.grupomedios.desclub.desclubapi.representations.CorporateMembershipRepresentation;
@@ -24,7 +25,7 @@ import javax.inject.Inject;
 /**
  * Main {@link Fragment} subclass.
  */
-public class CardFragment extends Fragment {
+public class CardFragment extends BaseFragment {
 
     private final String TAG = "CardFragment";
 
@@ -118,5 +119,10 @@ public class CardFragment extends Fragment {
                 }
             });
         }
+    }
+
+    @Override
+    public String getScreenName() {
+        return null;
     }
 }

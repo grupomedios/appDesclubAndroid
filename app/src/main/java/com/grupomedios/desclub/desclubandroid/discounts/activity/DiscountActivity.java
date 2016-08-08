@@ -80,7 +80,10 @@ public class DiscountActivity extends DesclubGeneralActivity {
 
         gpsService = new GPSService(this);
         gpsService.getLocation();
+
+        trackEvent(getString(R.string.analytics_category_discount), getString(R.string.analytics_event_discount_prefix) + discount.getBranch().getName());
     }
+
 
     @Override
     protected void onStart() {
@@ -242,7 +245,7 @@ public class DiscountActivity extends DesclubGeneralActivity {
                 String destAddress = discount.getLocation().getCoordinates()[1] + "," + discount.getLocation().getCoordinates()[0];
 
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?saddr="+sourceAddress+"&daddr="+destAddress));
+                        Uri.parse("http://maps.google.com/maps?saddr=" + sourceAddress + "&daddr=" + destAddress));
                 intent.setClassName("com.google.android.apps.maps", "com.google.android.maps.MapsActivity");
                 startActivity(intent);
 
@@ -250,7 +253,7 @@ public class DiscountActivity extends DesclubGeneralActivity {
             }
         });
 
-        showInMapIconView= createFloatingButton(R.string.show_in_map, R.drawable.location, new View.OnClickListener() {
+        showInMapIconView = createFloatingButton(R.string.show_in_map, R.drawable.location, new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -308,6 +311,7 @@ public class DiscountActivity extends DesclubGeneralActivity {
         TextView couponLabel = (TextView) findViewById(R.id.viewDiscount_coupon_label);
 
         if (viewDiscountLayout.getVisibility() == View.GONE) {
+            trackEvent(getString(R.string.analytics_category_coupon), getString(R.string.analytics_event_coupon_prefix) + discount.getBranch().getName());
 
             //force landscape
             this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
@@ -434,5 +438,10 @@ public class DiscountActivity extends DesclubGeneralActivity {
     @Override
     protected int getLayoutResource() {
         return R.layout.activity_discount;
+    }
+
+    @Override
+    public String getScreenName() {
+        return getString(R.string.analytics_screen_discount);
     }
 }

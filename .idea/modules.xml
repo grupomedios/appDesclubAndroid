@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DesclubAndroid-develop.iml" filepath="$PROJECT_DIR$/DesclubAndroid-develop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desclub.iml" filepath="$PROJECT_DIR$/Desclub.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

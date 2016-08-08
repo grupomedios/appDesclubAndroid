@@ -19,6 +19,7 @@ import com.android.volley.Response;
 import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 import com.grupomedios.desclub.desclubandroid.R;
 import com.grupomedios.desclub.desclubandroid.VolleySingleton;
+import com.grupomedios.desclub.desclubandroid.common.fragment.BaseFragment;
 import com.grupomedios.desclub.desclubandroid.discounts.activity.DiscountActivity;
 import com.grupomedios.desclub.desclubandroid.recommended.adapter.RecommendedDiscountAdapter;
 import com.grupomedios.desclub.desclubapi.facade.DiscountFacade;
@@ -45,7 +46,7 @@ import javax.inject.Inject;
 /**
  * Main {@link Fragment} subclass.
  */
-public class RecommendedFragment extends Fragment implements PaginableActivity {
+public class RecommendedFragment extends BaseFragment implements PaginableActivity {
 
     private final String TAG = "RecommendedFragment";
 
@@ -190,5 +191,10 @@ public class RecommendedFragment extends Fragment implements PaginableActivity {
         }, new SilentListErrorListener(TAG, getActivity(), progressDialog, pullToRefreshView), params);
 
         requestQueue.add(allRecommendedDiscounts);
+    }
+
+    @Override
+    public String getScreenName() {
+        return null;
     }
 }

@@ -21,6 +21,7 @@ import com.andreabaccega.widget.FormEditText;
 import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 import com.grupomedios.desclub.desclubandroid.R;
 import com.grupomedios.desclub.desclubandroid.card.activity.SaludActivity;
+import com.grupomedios.desclub.desclubandroid.common.fragment.BaseFragment;
 import com.grupomedios.desclub.desclubandroid.discounts.activity.DiscountListActivity;
 import com.grupomedios.desclub.desclubandroid.home.adapter.CategoryAdapter;
 import com.grupomedios.desclub.desclubandroid.home.util.FakeCategoryUtil;
@@ -37,7 +38,7 @@ import javax.inject.Inject;
 /**
  * Main {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment implements View.OnKeyListener {
+public class MainFragment extends BaseFragment implements View.OnKeyListener {
 
     @Inject
     UserHelper userHelper;
@@ -59,6 +60,8 @@ public class MainFragment extends Fragment implements View.OnKeyListener {
             FakeCategoryRepresentation fakeCategoryRepresentation = categories.get(position);
             //if not red medica => show category listing
             if (!fakeCategoryRepresentation.get_id().equals("1")) {
+                trackEvent(getString(R.string.analytics_category_category), getString(R.string.analytics_event_category_prefix) + fakeCategoryRepresentation.getName());
+
                 Intent intent = new Intent(getActivity(), DiscountListActivity.class);
                 intent.putExtra(DiscountListActivity.CURRENT_CATEGORY_PARAM, fakeCategoryRepresentation);
                 startActivity(intent);
@@ -110,7 +113,7 @@ public class MainFragment extends Fragment implements View.OnKeyListener {
 
         View view = getActivity().getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
@@ -173,5 +176,10 @@ public class MainFragment extends Fragment implements View.OnKeyListener {
         intent.putExtra(DiscountListActivity.SEARCH_PARAM, searchEdit.getText().toString());
         startActivity(intent);
 
+    }
+
+    @Override
+    public String getScreenName() {
+        return null;
     }
 }

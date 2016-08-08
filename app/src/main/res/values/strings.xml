@@ -106,4 +106,21 @@
     <string name="error_login">Correo electrónico o contraseña inválidos</string>
     <string name="error_user_alreay_exists">Un usuario con este correo electrónico ya está registrado</string>
 
+    <!--Analytics-->
+    <string name="analytics.screen.health">Salud</string>
+    <string name="analytics.screen.branches">Sucursales</string>
+    <string name="analytics.screen.discount">Detalle de Descuento</string>
+    <string name="analytics.screen.discounts_list">Lista de descuentos</string>
+    <string name="analytics.screen.map">Ver en mapa</string>
+    <string name="analytics.screen.card">Tarjeta</string>
+    <string name="analytics.screen.home">Inicio</string>
+    <string name="analytics.screen.recommended">Recomendados</string>
+    <string name="analytics.screen.map_tab">Mapa de Descuentos</string>
+    <string name="analytics.category.discount">Descuento</string>
+    <string name="analytics.event.discount_prefix">"Descuento - "</string>
+    <string name="analytics.category.category">Categoria</string>
+    <string name="analytics.event.category_prefix">"Categoria - "</string>
+    <string name="analytics.category.coupon">Usar cupon</string>
+    <string name="analytics.event.coupon_prefix">"Cupon - "</string>
+
 </resources>

@@ -25,6 +25,7 @@ public class SaludActivity extends DesclubGeneralActivity {
 
     }
 
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -44,4 +45,8 @@ public class SaludActivity extends DesclubGeneralActivity {
         return R.layout.activity_salud;
     }
 
+    @Override
+    public String getScreenName() {
+        return getString(R.string.analytics_screen_health);
+    }
 }

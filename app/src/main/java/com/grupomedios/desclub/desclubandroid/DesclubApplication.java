@@ -3,6 +3,8 @@ package com.grupomedios.desclub.desclubandroid;
 import android.content.Context;
 
 import com.crashlytics.android.Crashlytics;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
 import com.grupomedios.desclub.desclubutil.MCXApplication;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -50,5 +52,17 @@ public class DesclubApplication extends MCXApplication {
     @Override
     public void buildDaggerModules(List<Object> modules) {
         modules.add(new DesclubModule());
+    }
+
+    // Google Analytics
+    private Tracker mTracker;
+
+    synchronized public Tracker getDefaultTracker() {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+            mTracker = analytics.newTracker(R.xml.global_tracker);
+        }
+        return mTracker;
     }
 }

@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "300269079496",
+    "project_id": "firebase-desclub"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300269079496:android:aabe884b4b77ff69",
+        "android_client_info": {
+          "package_name": "com.grupomedios.desclub.desclubandroid"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIy53Te_g8RIIHwre1E31bjphWXqjJEbg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-82172975-1"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

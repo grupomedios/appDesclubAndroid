@@ -1,7 +1,6 @@
 package com.grupomedios.desclub.desclubandroid.discounts.fragment;
 
 import android.annotation.TargetApi;
-import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -34,6 +33,7 @@ import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 import com.grupomedios.desclub.desclubandroid.R;
 import com.grupomedios.desclub.desclubandroid.VolleySingleton;
 import com.grupomedios.desclub.desclubandroid.common.activity.BaseActivity;
+import com.grupomedios.desclub.desclubandroid.common.fragment.BaseFragment;
 import com.grupomedios.desclub.desclubandroid.discounts.activity.DiscountActivity;
 import com.grupomedios.desclub.desclubandroid.discounts.adapter.DiscountAdapter;
 import com.grupomedios.desclub.desclubapi.facade.CategoryFacade;
@@ -69,7 +69,7 @@ import javax.inject.Inject;
 /**
  * Created by jhoncruz on 28/05/15.
  */
-public class DiscountListFragment extends Fragment implements PaginableActivity, View.OnKeyListener {
+public class DiscountListFragment extends BaseFragment implements PaginableActivity, View.OnKeyListener {
 
     private final String TAG = "DiscountListFragment";
 
@@ -637,5 +637,10 @@ public class DiscountListFragment extends Fragment implements PaginableActivity,
 
         }
         return false;
+    }
+
+    @Override
+    public String getScreenName() {
+        return null;
     }
 }

@@ -41,6 +41,8 @@ public class BranchesActivity extends DesclubGeneralActivity {
 
     }
 
+
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -51,5 +53,10 @@ public class BranchesActivity extends DesclubGeneralActivity {
     @Override
     protected int getLayoutResource() {
         return R.layout.activity_branches;
+    }
+
+    @Override
+    public String getScreenName() {
+        return getString(R.string.analytics_screen_branches);
     }
 }

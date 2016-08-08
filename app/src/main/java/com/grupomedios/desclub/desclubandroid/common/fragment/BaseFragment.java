@@ -1,49 +1,38 @@
-package com.grupomedios.desclub.desclubandroid.common.activity;
+package com.grupomedios.desclub.desclubandroid.common.fragment;
 
-import android.os.Bundle;
+import android.app.Fragment;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 
 /**
- * Created by jhoncruz on 5/03/15.
+ * Created by Matias on 8/8/16.
  */
-public abstract class DesclubGeneralActivity extends BaseActivity {
-
-    private final static String TAG = "DesclubGeneralActivity";
-
-    private MaterialDialog progressDialog;
-
-
+public abstract class BaseFragment extends Fragment {
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         trackScreen(getScreenName());
     }
 
     public void trackScreen(String screenName) {
         if (screenName != null && !screenName.isEmpty()) {
-            Tracker tracker = ((DesclubApplication) getApplication()).getDefaultTracker();
+            Tracker tracker = ((DesclubApplication) getActivity().getApplication()).getDefaultTracker();
             tracker.setScreenName(screenName);
             tracker.send(new HitBuilders.ScreenViewBuilder().build());
         }
     }
 
+    public abstract String getScreenName();
+
+
     public void trackEvent(String eventCategory, String eventName) {
-        Tracker tracker = ((DesclubApplication) getApplication()).getDefaultTracker();
+        Tracker tracker = ((DesclubApplication) getActivity().getApplication()).getDefaultTracker();
 
         tracker.send(new HitBuilders.EventBuilder()
                 .setCategory(eventCategory)
                 .setAction(eventName)
                 .build());
     }
-
-    public abstract String getScreenName();
 }
