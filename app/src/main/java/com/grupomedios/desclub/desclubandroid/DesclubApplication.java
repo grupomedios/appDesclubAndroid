@@ -12,6 +12,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.util.List;
 
 import io.fabric.sdk.android.Fabric;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 /**
  * Created by jhoncruz on 27/05/15.
@@ -47,6 +48,8 @@ public class DesclubApplication extends MCXApplication {
         ImageLoader.getInstance()
                 .init(ImageLoaderConfiguration.createDefault(this));
 
+        initCalligraphy();
+
     }
 
     @Override
@@ -64,5 +67,12 @@ public class DesclubApplication extends MCXApplication {
             mTracker = analytics.newTracker(R.xml.global_tracker);
         }
         return mTracker;
+    }
+
+    private void initCalligraphy(){
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
     }
 }

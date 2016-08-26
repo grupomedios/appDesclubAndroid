@@ -1,5 +1,6 @@
 package com.grupomedios.desclub.desclubandroid.common.activity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
@@ -9,6 +10,8 @@ import com.android.volley.RequestQueue;
 import com.grupomedios.desclub.desclubandroid.R;
 import com.grupomedios.desclub.desclubandroid.VolleySingleton;
 import com.grupomedios.desclub.desclubutil.MCXApplication;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public abstract class BaseActivity extends ActionBarActivity {
 
@@ -58,4 +61,8 @@ public abstract class BaseActivity extends ActionBarActivity {
         }
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
 }

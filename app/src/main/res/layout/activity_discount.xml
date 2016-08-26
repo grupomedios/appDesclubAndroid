@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
     android:layout_gravity="center"
     android:background="@android:color/white"
     android:gravity="center"
-    android:theme="@style/TransparentBackground">
+    android:theme="@style/TransparentBackground"
+    tools:ignore="MissingPrefix">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
+        android:animateLayoutChanges="true"
         android:orientation="vertical">
 
         <include
@@ -18,7 +23,7 @@
 
         <RelativeLayout
             android:id="@+id/viewDiscount_couponView_layout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="top"
@@ -50,138 +55,172 @@
 
             </LinearLayout>
 
-            <RelativeLayout
+            <ScrollView
                 android:id="@+id/viewDiscount_showCardLayout"
-                android:layout_width="421dp"
-                android:layout_height="265dp"
-                android:layout_marginRight="80dp"
-                android:gravity="center">
-
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/card_back" />
-
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@android:color/transparent"
-                    android:orientation="vertical"
-                    android:visibility="visible">
+                    android:orientation="vertical">
 
-                    <TextClock
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
-                        android:format12Hour="MMM dd, yyyy hh:mm:ss"
-                        android:format24Hour="MMM dd, yyyy hh:mm:ss"
-                        android:paddingTop="10dp"
-                        android:textColor="@android:color/white"
-                        android:textSize="15dp" />
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:orientation="horizontal">
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"
+                        android:layout_marginTop="@dimen/margin_big"
+                        android:gravity="center_horizontal">
+
 
                         <ImageView
-                            android:layout_width="140dp"
-                            android:layout_height="79dp"
-                            android:src="@drawable/logo_desclub" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_gravity="bottom"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textColor="@android:color/white"
-                            android:paddingLeft="10dp"
-                            android:textStyle="bold"
-                            android:text="@string/membership"/>
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/card_back" />
 
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/viewDiscount_membershipNumber"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="20dp"
-                        android:text="0000 0000 0000 0000"
-                        android:textColor="@android:color/white"
-                        android:textSize="28dp"
-                        android:textStyle="bold"
-                        android:typeface="monospace" />
-
-                    <TextView
-                        android:id="@+id/viewDiscount_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="5dp"
-                        android:text="BERNY MOHNBLATT"
-                        android:textColor="@android:color/white"
-                        android:textSize="20dp"
-                        android:textStyle="bold"
-                        android:typeface="monospace" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
 
                         <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_weight="0.7"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingTop="20dp"
-                            android:orientation="vertical">
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextClock
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:format12Hour="MMM dd, yyyy hh:mm:ss"
+                                android:format24Hour="MMM dd, yyyy hh:mm:ss"
+                                android:paddingTop="10dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="15dp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="55dp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/logo_desclub" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:paddingLeft="10dp"
+                                    android:text="@string/membership"
+                                    android:textColor="@android:color/white"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
 
                             <TextView
-                                android:layout_width="80dp"
+                                android:id="@+id/viewDiscount_membershipNumber"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:paddingTop="0dp"
-                                android:text="@string/validThru"
+                                android:paddingTop="@dimen/margin_normal"
+                                android:text="0000 0000 0000 0000"
                                 android:textColor="@android:color/white"
-                                android:textSize="11dp" />
-
-                            <TextView
-                                android:id="@+id/viewDiscount_validThru"
-                                android:layout_width="180dp"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="0dp"
-                                android:paddingBottom="10dp"
-                                android:text="08-19"
-                                android:textColor="@android:color/white"
-                                android:textSize="17dp"
+                                android:textSize="@dimen/text_size_big"
                                 android:textStyle="bold"
                                 android:typeface="monospace" />
 
+                            <TextView
+                                android:id="@+id/viewDiscount_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="5dp"
+                                android:text="BERNY MOHNBLATT"
+                                android:textColor="@android:color/white"
+                                android:textSize="@dimen/text_size_medium"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:orientation="vertical"
+                                    android:paddingTop="@dimen/margin_normal">
+
+                                    <TextView
+                                        android:layout_width="80dp"
+                                        android:layout_height="wrap_content"
+                                        android:paddingTop="0dp"
+                                        android:text="@string/validThru"
+                                        android:textColor="@android:color/white"
+                                        android:textSize="11dp" />
+
+                                    <TextView
+                                        android:id="@+id/viewDiscount_validThru"
+                                        android:layout_width="180dp"
+                                        android:layout_height="wrap_content"
+                                        android:paddingBottom="10dp"
+                                        android:paddingTop="0dp"
+                                        android:text="08-19"
+                                        android:textColor="@android:color/white"
+                                        android:textStyle="bold"
+                                        android:typeface="monospace" />
+                                        android:textSize="17dp" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:layout_weight="0.2"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/logo_desclub" />
+
+                            </LinearLayout>
                         </LinearLayout>
+                    </RelativeLayout>
 
-                        <ImageView
-                            android:layout_width="0dp"
-                            android:layout_weight="0.2"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="right"
-                            android:src="@drawable/logo_desclub" />
-
-                    </LinearLayout>
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/discount_choice_used"
+                        style="@style/coupon_choice"
+                        android:background="@drawable/round_background_green"
+                        android:text="@string/coupon_result.used" />
 
 
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/discount_choice_neutral"
+                        style="@style/coupon_choice"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/round_background_blue"
+                        android:text="@string/coupon_result.neutral" />
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/discount_choice_not_used"
+                        style="@style/coupon_choice"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:background="@drawable/round_background_red"
+                        android:text="@string/coupon_result.not_used" />
                 </LinearLayout>
-            </RelativeLayout>
+            </ScrollView>
 
         </RelativeLayout>
 
-        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        <ScrollView
+            android:id="@+id/discount_coupon_description_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -331,9 +370,9 @@
                         android:layout_marginBottom="25dp"
                         android:layout_marginTop="25dp"
                         android:gravity="center"
-                        android:text="restr"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
+                        android:text="restr"
                         android:textColor="@color/material_red_500"
                         android:textSize="11sp" />
                 </LinearLayout>
@@ -367,4 +406,38 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
+    <RelativeLayout
+        android:id="@+id/discount_thanks_message_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_90_percent"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_above="@+id/discount_thanks_message"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_tick" />
+
+        <me.grantland.widget.AutofitTextView
+            android:id="@+id/discount_thanks_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/discount_center_point"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center"
+            android:padding="@dimen/margin_normal"
+            android:text="¡Gracias por usar tu cupón!"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_medium"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/discount_center_point"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 </RelativeLayout>

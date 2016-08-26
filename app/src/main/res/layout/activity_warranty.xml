@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/warranty_btn_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="left"
+            android:padding="8dp"
+            android:src="@drawable/ic_close_black" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_warranty" />
+
+        <TextView
+            fontPath="@string/font.opensans.bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_big"
+            android:gravity="center"
+            android:text="@string/warranty.title"
+            android:textColor="@color/red.warranty"
+            android:textSize="34sp" />
+
+        <TextView
+            fontPath="@string/font.opensans.bold"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_biggest"
+            android:gravity="center"
+            android:text="@string/warranty.description"
+            android:textColor="@color/grey.warranty"
+            android:textSize="@dimen/text_size_small" />
+
+        <TextView
+            android:id="@+id/warranty_btn_request"
+            fontPath="@string/font.opensans.extrabold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/oval_background_red"
+            android:gravity="center"
+            android:minWidth="250dp"
+            android:padding="@dimen/margin_normal"
+            android:text="@string/warranty.request"
+            android:textColor="@color/White"
+            android:textSize="@dimen/text_size_medium" />
+    </LinearLayout>
+</ScrollView>

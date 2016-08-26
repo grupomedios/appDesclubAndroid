@@ -16,6 +16,7 @@ import com.grupomedios.desclub.desclubandroid.DesclubApplication;
 import com.grupomedios.desclub.desclubandroid.R;
 import com.grupomedios.desclub.desclubandroid.common.fragment.BaseFragment;
 import com.grupomedios.desclub.desclubandroid.home.activity.DesclubMainActivity;
+import com.grupomedios.desclub.desclubandroid.warranty.activity.WarrantyActivity;
 import com.grupomedios.desclub.desclubapi.facade.CorporateMembershipFacade;
 import com.grupomedios.desclub.desclubapi.representations.CorporateMembershipRepresentation;
 import com.grupomedios.desclub.desclubutil.security.UserHelper;
@@ -79,6 +80,12 @@ public class CardFragment extends BaseFragment {
             membershipNumber.setText(userHelper.getCardNumber());
             validThru.setText(userHelper.getValidThru());
 
+            getView().findViewById(R.id.card_btn_request_warranty).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(getActivity(), WarrantyActivity.class));
+                }
+            });
 
             Button exit = (Button) getView().findViewById(R.id.card_exit_button);
             exit.setOnClickListener(new View.OnClickListener() {

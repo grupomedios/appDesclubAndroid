@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/warranty_btn_close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="left"
+                android:padding="8dp"
+                android:src="@drawable/ic_close_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:src="@drawable/ic_warranty" />
+
+                <TextView
+                    fontPath="@string/font.opensans.extrabold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/warranty.title"
+                    android:textColor="@color/red.warranty"
+                    android:textSize="@dimen/text_size_normal" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--STEP 1 -->
+        <LinearLayout style="@style/warranty_step_container">
+
+            <ImageView
+                style="@style/warranty_icon"
+                android:src="@drawable/ic_step_1" />
+
+            <TextView
+                style="@style/warranty_step_description"
+                fontPath="@string/font.opensans.regular"
+                android:text="@string/warranty.step_1" />
+
+            <TextView
+                android:id="@+id/request_warranty_btn_scan"
+                style="@style/warranty_button"
+                fontPath="@string/font.opensans.extrabold"
+                android:text="@string/warranty.scan" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            style="@style/warranty_step_container"
+            android:background="@color/blue.warranty">
+
+            <ImageView
+                style="@style/warranty_icon"
+                android:src="@drawable/ic_step_2" />
+
+            <TextView
+                style="@style/warranty_step_description"
+                fontPath="@string/font.opensans.regular"
+                android:text="@string/warranty.step_2" />
+
+            <TextView
+                android:id="@+id/request_warranty_btn_call"
+                style="@style/warranty_button"
+                fontPath="@string/font.opensans.extrabold"
+                android:text="@string/warranty.call" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/warranty_step_container"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                style="@style/warranty_icon"
+                android:src="@drawable/ic_step_3" />
+
+            <TextView
+                style="@style/warranty_step_description"
+                fontPath="@string/font.opensans.regular"
+                android:text="@string/warranty.step_3" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

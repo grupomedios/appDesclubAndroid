@@ -116,11 +116,46 @@
     <string name="analytics.screen.home">Inicio</string>
     <string name="analytics.screen.recommended">Recomendados</string>
     <string name="analytics.screen.map_tab">Mapa de Descuentos</string>
+    <string name="analytics.screen.warranty">Garantia de satisfaccion</string>
+    <string name="analytics.screen.request_warranty">Solicitude de garantia de satisfaccion</string>
     <string name="analytics.category.discount">Descuento</string>
     <string name="analytics.event.discount_prefix">"Descuento - "</string>
     <string name="analytics.category.category">Categoria</string>
     <string name="analytics.event.category_prefix">"Categoria - "</string>
     <string name="analytics.category.coupon">Usar cupon</string>
     <string name="analytics.event.coupon_prefix">"Cupon - "</string>
+    <string name="coupon_result.used">Yay! Si me aplicaron mi descuento</string>
+    <string name="coupon_result.neutral">Oops! Sólo estaba probando</string>
+    <string name="coupon_result.not_used">No me aplicaron mi descuento</string>
+    <string name="analytics.category.coupon_used">Cupon aplicado</string>
+    <string name="analytics.category.coupon_not_used">Cupon no usado</string>
+    <string name="analytics.category.cupon_not_valid">Cupon no aplicado por comercio</string>
 
+    <!--Fonts-->
+    <string name="font.courier_new_bold">courier_new_bold.ttf</string>
+    <string name="font.opensans.bold">OpenSans-Bold.ttf</string>
+    <string name="font.opensans.extrabold">OpenSans-ExtraBold.ttf</string>
+    <string name="font.opensans.regular">OpenSans-Regular.ttf</string>
+
+
+    <!--Warranty-->
+    <string name="warranty.description">DescluB te ofrece una Garantía de Satisfacción que te respalda si el comercio participante no te hace válido el descuento o promoción vigente.</string>
+    <string name="warranty.title">Garantía de\nsatisfacción</string>
+    <string name="warranty.request">Solicitar</string>
+    <string name="warranty.step_1">Conserva el ticket del comercio para escanearlo</string>
+    <string name="warranty.step_2">Llamar al centro de atención a clientes al\n01 800 827 2582 para que te podamos brindar apoyo</string>
+    <string name="warranty.scan">Escanear ticket</string>
+    <string name="warranty.call">Llamar</string>
+    <string name="warranty.step_3">Se comenzará el proceso de investigación y en 72Hrs. te haremos el reembolso en caso de proceder</string>
+
+    <string name="contact.phone">018008272582</string>
+    <string name="picture_title">Elegir opción</string>
+    <string name="picture_profile_camera">Cámara</string>
+    <string name="picture_profile_gallery">Galería</string>
+    <string name="warranty.scan_error">No hemos podido registrar tu ticket. Por favor intente nuevamente.</string>
+    <string name="warranty.email_error">No hemos podido enviar su correo. Verifique que posee un cliente de correo instalado e intente nuevamente.</string>
+    <string name="contact.email">atencionaclientes@desclub.com.mx</string>
+    <string name="contact.subject">Solicitud de Garantía de satisfacción</string>
+    <string name="contact.chooser_title">Enviar correo...</string>
+    <string name="warranty.body" formatted="false" >\nProyecto: %s\n\nNombre: %s\n\nCorreo electrónico: %s\n\nNúmero de membresía: %s\n\nVigencia: %s\n\n</string>
 </resources>

@@ -14,8 +14,11 @@
     <color name="category_all">#A63CF1</color>
 
 
-
     <color name="white_15_percent">#26ffffff</color>
     <color name="white_30_percent">#4Dffffff</color>
-
+    <color name="black_90_percent">#E6000000</color>
+    <color name="red.warranty">#f41d29</color>
+    <color name="grey.warranty">#414042</color>
+    <color name="blue.dark.warranty">#0d0d49</color>
+    <color name="blue.warranty">#202082</color>
 </resources>

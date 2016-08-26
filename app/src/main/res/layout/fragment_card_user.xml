@@ -1,142 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
-    android:paddingLeft="10dp">
+    android:background="@android:color/white">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:paddingLeft="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/card_version"
-            android:gravity="right"
-            android:textSize="10sp"
-            android:layout_gravity="right"
-            android:textColor="@color/material_blue_800"
-            android:text="v0.0.0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <TextView
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingTop="20dp"
-            android:text="@string/project"
-            android:textColor="@color/desclub_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/card_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:text="v0.0.0"
+                android:textColor="@color/material_blue_800"
+                android:textSize="10sp" />
 
-        <TextView
-            android:id="@+id/card_project"
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="Desclub"
-            android:textSize="20sp" />
+            <TextView
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:text="@string/project"
+                android:textColor="@color/desclub_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingTop="20dp"
-            android:text="@string/name"
-            android:textColor="@color/desclub_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/card_project"
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Desclub"
+                android:textSize="20sp" />
 
-        <TextView
-            android:id="@+id/card_name"
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="Nombre Apellido"
-            android:textSize="20sp" />
+            <TextView
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:text="@string/name"
+                android:textColor="@color/desclub_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingTop="20dp"
-            android:text="@string/email"
-            android:textColor="@color/desclub_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                android:id="@+id/card_name"
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Nombre Apellido"
+                android:textSize="20sp" />
+
+            <TextView
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:text="@string/email"
+                android:textColor="@color/desclub_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
-        <TextView
-            android:id="@+id/card_email"
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="soporte@desclub.com"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/card_email"
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="soporte@desclub.com"
+                android:textSize="20sp" />
 
-        <TextView
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingTop="20dp"
-            android:text="@string/card_code"
-            android:textColor="@color/desclub_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:text="@string/card_code"
+                android:textColor="@color/desclub_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/card_card_numberl"
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="0000000000000000"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/card_card_numberl"
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="0000000000000000"
+                android:textSize="20sp" />
 
-        <TextView
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:paddingTop="20dp"
-            android:text="@string/validThru"
-            android:textColor="@color/desclub_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            <TextView
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingTop="20dp"
+                android:text="@string/validThru"
+                android:textColor="@color/desclub_blue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/card_validThru"
-            style="@style/BeepLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="08-19"
-            android:textSize="20sp" />
+            <TextView
+                android:id="@+id/card_validThru"
+                style="@style/BeepLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="08-19"
+                android:textSize="20sp" />
 
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/card_btn_request_warranty"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:gravity="center_horizontal|bottom"
-        android:orientation="vertical">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:src="@drawable/ic_warranty" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:background="@android:color/white"
-            android:text="@string/exit"
-            android:id="@+id/card_exit_button"/>
-    </LinearLayout>
+                <TextView
+                    fontPath="@string/font.opensans.extrabold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="@string/warranty.title"
+                    android:textColor="@color/red.warranty"
+                    android:textSize="@dimen/text_size_normal"
+                    tools:ignore="MissingPrefix" />
+            </LinearLayout>
+        </LinearLayout>
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/card_exit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@android:color/white"
+                android:text="@string/exit" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

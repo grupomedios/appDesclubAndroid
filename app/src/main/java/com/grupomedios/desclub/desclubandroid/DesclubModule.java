@@ -15,6 +15,8 @@ import com.grupomedios.desclub.desclubandroid.home.fragment.MainFragment;
 import com.grupomedios.desclub.desclubandroid.map.activity.DesclubMapActivity;
 import com.grupomedios.desclub.desclubandroid.map.fragment.DesclubMapFragment;
 import com.grupomedios.desclub.desclubandroid.recommended.fragment.RecommendedFragment;
+import com.grupomedios.desclub.desclubandroid.warranty.activity.RequestWarrantyActivity;
+import com.grupomedios.desclub.desclubandroid.warranty.activity.WarrantyActivity;
 import com.grupomedios.desclub.desclubutil.MCXModule;
 
 import dagger.Module;
@@ -34,14 +36,14 @@ import dagger.Module;
                 SaludActivity.class,
                 DesclubMapActivity.class,
                 BranchesActivity.class,
-
                 MainFragment.class,
                 DesclubMapFragment.class,
                 RecommendedFragment.class,
                 CardFragment.class,
                 DiscountListFragment.class,
-                BranchesFragment.class
-
+                BranchesFragment.class,
+                WarrantyActivity.class,
+                RequestWarrantyActivity.class
         },
         includes = {
                 MCXModule.class
