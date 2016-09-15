@@ -139,7 +139,7 @@
 
 
     <!--Warranty-->
-    <string name="warranty.description">DescluB te ofrece una Garantía de Satisfacción que te respalda si el comercio participante no te hace válido el descuento o promoción vigente.</string>
+    <string name="warranty.description">Te ofrecemos una Garantía de Satisfacción que te respalda si el comercio participante no te hace válido el descuento o promoción vigente.</string>
     <string name="warranty.title">Garantía de\nsatisfacción</string>
     <string name="warranty.request">Solicitar</string>
     <string name="warranty.step_1">Conserva el ticket del comercio para escanearlo</string>

@@ -162,6 +162,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="@dimen/margin_medium"
             android:gravity="center_horizontal|bottom"
+            android:visibility="gone"
             android:orientation="vertical">
 
             <Button
