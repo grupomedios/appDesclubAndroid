@@ -158,4 +158,5 @@
     <string name="contact.subject">Solicitud de Garantía de satisfacción</string>
     <string name="contact.chooser_title">Enviar correo...</string>
     <string name="warranty.body" formatted="false" >\nProyecto: %s\n\nNombre: %s\n\nCorreo electrónico: %s\n\nNúmero de membresía: %s\n\nVigencia: %s\n\n</string>
+    <string name="discount.phone.format">Teléfono: %s</string>
 </resources>

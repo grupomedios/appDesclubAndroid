@@ -88,26 +88,28 @@ public class DiscountAdapter extends BaseAdapter {
         holder.distance.setText(calculateDistance(dm.getDis()));
         holder.distance.setTextColor(convertView.getResources().getColor(category.getColor()));
 
-        boolean showPromo = false;
+        boolean showCash = false;
+        boolean showCard = false;
 
-        if (dm.getDiscount().getCash() != null && dm.getDiscount().getCash().length() > 0) {
+        if (dm.getDiscount().isCashValueValid()) {
             holder.cash.setTextColor(convertView.getResources().getColor(category.getColor()));
             holder.cash.setText(dm.getDiscount().getCash() + "%");
+            showCash = true;
         } else {
+            showCash = false;
             holder.parentLayout.removeView(holder.cash);
-            showPromo = true;
         }
 
-        if (dm.getDiscount().getCard() != null && dm.getDiscount().getCard().length() > 0) {
+        if (dm.getDiscount().isCardValueValid()) {
             holder.card.setTextColor(convertView.getResources().getColor(category.getColor()));
             holder.card.setText(dm.getDiscount().getCard() + "%");
-            showPromo = false;
+            showCard = true;
         } else {
             holder.parentLayout.removeView(holder.card);
-            showPromo = true;
+            showCard = false;
         }
 
-        if (showPromo) {
+        if (!showCard && !showCash) {
             holder.parentLayout.removeView(holder.card);
             holder.parentLayout.removeView(holder.cash);
 

@@ -140,7 +140,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:paddingTop="5dp"
-                                android:text="BERNY MOHNBLATT"
                                 android:textColor="@android:color/white"
                                 android:textSize="@dimen/text_size_medium"
                                 android:textStyle="bold"
@@ -233,7 +232,6 @@
                     android:layout_width="90dp"
                     android:layout_height="90dp"
                     android:layout_gravity="center"
-                    android:layout_marginBottom="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:layout_marginTop="16dp"
@@ -242,8 +240,10 @@
 
 
                 <LinearLayout
+                    android:layout_marginTop="15dp"
                     android:id="@+id/viewDiscount_card_cash_layout"
                     android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
@@ -296,6 +296,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
+                    android:layout_marginTop="15dp"
                     android:visibility="gone">
 
                     <TextView
@@ -306,7 +307,6 @@
                         android:gravity="center"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
-                        android:text="promo"
                         android:textSize="16sp" />
 
                 </RelativeLayout>
@@ -342,15 +342,25 @@
                         android:textSize="22sp" />
 
                     <TextView
+                        android:id="@+id/viewDiscount_branch_phone_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textColor="@color/material_grey_500" />
+
+                    <TextView
                         android:id="@+id/viewDiscount_branch_address_textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="25dp"
+                        android:layout_marginTop="5dp"
                         android:gravity="center"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
-                        android:text="addr1"
                         android:textColor="@color/material_grey_500" />
 
                     <TextView
@@ -358,6 +368,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
                         android:text="0 km"
                         android:textColor="@color/desclub_blue"
                         android:textSize="12dp" />
@@ -372,7 +383,6 @@
                         android:gravity="center"
                         android:paddingLeft="5dp"
                         android:paddingRight="5dp"
-                        android:text="restr"
                         android:textColor="@color/material_red_500"
                         android:textSize="11sp" />
                 </LinearLayout>
