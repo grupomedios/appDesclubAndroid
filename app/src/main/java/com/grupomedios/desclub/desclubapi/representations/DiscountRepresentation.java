@@ -69,13 +69,7 @@ public class DiscountRepresentation implements Serializable {
         return cash;
     }
 
-    public boolean isCashValueValid() {
-        try {
-            return cash != null && !cash.isEmpty() && Float.parseFloat(cash) > 0f;
-        } catch (Exception e) {
-            return false;
-        }
-    }
+
     
     public void setCash(String cash) {
         this.cash = cash;
@@ -83,6 +77,14 @@ public class DiscountRepresentation implements Serializable {
 
     public String getCard() {
         return card;
+    }
+
+    public boolean isCashValueValid() {
+        try {
+            return cash != null && !cash.isEmpty() && Float.parseFloat(cash) > 0f;
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public boolean isCardValueValid() {
