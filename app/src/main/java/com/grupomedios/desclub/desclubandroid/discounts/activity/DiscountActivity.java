@@ -80,6 +80,7 @@ public class DiscountActivity extends DesclubGeneralActivity {
     private TextView mCardTextView;
     private TextView mCashTextView;
     private TextView mPhoneTextView;
+    private View mPhoneContainer;
     private View mCardCashDiscountsContainer;
 
     @Override
@@ -107,6 +108,7 @@ public class DiscountActivity extends DesclubGeneralActivity {
         mCashTextView = (TextView) findViewById(R.id.viewDiscount_cash_textView);
         mCardTextView = (TextView) findViewById(R.id.viewDiscount_card_textView);
         mPhoneTextView = (TextView) findViewById(R.id.viewDiscount_branch_phone_textView);
+        mPhoneContainer = findViewById(R.id.viewDiscount_branch_phone_container);
         mCardCashDiscountsContainer = findViewById(R.id.viewDiscount_card_cash_layout);
         findViewById(R.id.discount_choice_used).setOnClickListener(mOnClickOnCouponUsed);
         findViewById(R.id.discount_choice_neutral).setOnClickListener(mOnClickOnCouponNeutral);
@@ -213,12 +215,12 @@ public class DiscountActivity extends DesclubGeneralActivity {
         }
 
         if (discount.getBranch().getPhone() != null && !discount.getBranch().getPhone().isEmpty()) {
-            mPhoneTextView.setText(String.format(getString(R.string.discount_phone_format), discount.getBranch().getPhone()));
-            mPhoneTextView.setVisibility(View.VISIBLE);
+            mPhoneTextView.setText(discount.getBranch().getPhone());
+            mPhoneContainer.setVisibility(View.VISIBLE);
             mPhoneTextView.setOnClickListener(mOnClickOnCall);
         } else
         {
-            mPhoneTextView.setVisibility(View.GONE);
+            mPhoneContainer.setVisibility(View.GONE);
             mPhoneTextView.setOnClickListener(null);
         }
 
